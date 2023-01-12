@@ -10,7 +10,14 @@ export class ListSales implements IListSales {
   ) {}
 
   async list() {
-    const response = await this.httpClientGet(this.url)
-    return response
+    try {
+      const response = await this.httpClientGet(this.url)
+      return response
+    } catch (error) {
+      return {
+        data: [],
+        status: 400
+      }
+    }
   }
 }
