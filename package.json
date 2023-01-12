@@ -33,7 +33,16 @@
     "test": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src/",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "jest --passWithNoTests",
+    "test:watch": "npm run test -- --watchAll",
+    "test:unit": "npm run test -- --config=jest-unit.config.js",
+    "test:unit:watch": "npm run test:watch -- --config=jest-unit.config.js",
+    "test:integration": "npm run test -- --config=jest-integration.config.js",
+    "test:integration:watch": "npm run test:watch -- --config=jest-integration.config.js",
+    "test:cov": "npm run test -- --coverage",
+    "server": "json-server --watch ./data/db.json",
+    "dev": "npm run server & npm run dev"
   },
   "browserslist": {
     "production": [
