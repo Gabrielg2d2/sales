@@ -1,5 +1,5 @@
-import { SalesTemplate } from "templates/Sales";
+import { SalesTemplate } from 'templates/Sales'
 
 export function SalesPage() {
-  return <SalesTemplate />;
+  return <SalesTemplate />
 }
