@@ -1,4 +1,9 @@
 module.exports = {
+  roots: ['src'],
+  moduleDirectories: ['node_modules', 'src'],
+  moduleNameMapper: {
+    'src/(.*)': '<rootDir>/src/$1'
+  },
   transformIgnorePatterns: ['/node_modules/'],
   testMatch: ['**/?(*.)+(spec|test).(js|jsx|ts|tsx)'],
   preset: 'ts-jest',
