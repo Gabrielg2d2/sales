@@ -6,8 +6,9 @@ module.exports = {
   collectCoverage: true,
   coverageDirectory: 'coverage',
   collectCoverageFrom: [
-    'src/*',
+    'src/**',
     '!src/*.d.ts',
+    '!**/domain/**',
     '!src/index.tsx',
     '!src/global/types/**/*'
   ],
