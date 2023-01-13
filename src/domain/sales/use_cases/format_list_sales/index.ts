@@ -1,9 +1,9 @@
 import { DataSalesModelFormatted, DataSalesModel } from 'domain/types'
 
 export interface IFormatListSales {
-  formatStatus: (status: string) => JSX.Element
+  formatStatus: (status: string) => string
   formatDateAndTime: (date: string) => string
-  formatFlag: (flag: string) => JSX.Element
+  formatFlag: (flag: string) => string
   formatBrute: (brute: number) => string
   formatLiquid: (liquid: number) => string
   formatRates: (rates: number) => string

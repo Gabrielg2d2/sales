@@ -3,19 +3,12 @@ import { DataSalesModel, DataSalesModelFormatted } from 'domain/types'
 import { formatDateAndHourPtBr, formatMoneyPtBr } from 'global/functions'
 
 export class FormatListSales implements IFormatListSales {
-  formatStatus(status: string): JSX.Element {
-    switch (status) {
-      case 'authorized':
-        return <span>Autorizada</span>
-      case 'completed':
-        return <span>Concluída</span>
-      case 'canceled':
-        return <span>Cancelada</span>
-      case 'denied':
-        return <span>Negada</span>
-      default:
-        return <span>Indefinido</span>
-    }
+  formatStatus(value: string): string {
+    const list = ['authorized', 'completed', 'canceled', 'denied']
+
+    if (!list.includes(value)) return 'undefined'
+
+    return value
   }
 
   formatDateAndTime(dateAndTime: string): string {
@@ -25,17 +18,12 @@ export class FormatListSales implements IFormatListSales {
     return `${dateFormatted} às ${timeFormatted}`
   }
 
-  formatFlag(flag: string): JSX.Element {
-    switch (flag) {
-      case 'master':
-        return <span data-testid="master">{flag}</span>
-      case 'visa':
-        return <span data-testid="visa">{flag}</span>
-      case 'pix':
-        return <span data-testid="pix">{flag}</span>
-      default:
-        return <span data-testid="default">{flag}</span>
-    }
+  formatFlag(flag: string): string {
+    const list = ['pix', 'visa', 'mastercard']
+
+    if (!list.includes(flag)) return 'undefined'
+
+    return flag
   }
 
   formatBrute(brute: number): string {

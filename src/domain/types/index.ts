@@ -38,9 +38,9 @@ export type DataSalesModelFormatted = {
   discount: number
   document: string
   captureMode: string
-  statusFormatted: JSX.Element // formatted
+  statusFormatted: string // formatted
   dateAndTimeFormatted: string
-  flagFormatted: JSX.Element
+  flagFormatted: string
   bruteFormatted: string
   liquidFormatted: string
   ratesFormatted: string

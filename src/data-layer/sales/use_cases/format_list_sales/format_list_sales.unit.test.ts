@@ -1,51 +1,40 @@
 import { FormatListSales } from '.'
-import { render, screen } from '@testing-library/react'
-import { salesMockList, salesMockListFormattedString } from 'mock/sales'
+import { salesMockList, salesMockListFormatted } from 'mock/sales'
 
 describe('formatStatus', () => {
-  it('should return a jsx element, with "Indefinido" text', () => {
+  it('should return a text, with "undefined"', () => {
     const formatListSales = new FormatListSales()
     const statusFormatted = formatListSales.formatStatus('undefined')
 
-    render(statusFormatted)
-
-    expect(screen.getByText('Indefinido')).toBeInTheDocument()
+    expect(statusFormatted).toBe('undefined')
   })
 
-  it('should return a jsx element, with "Autorizada" text', () => {
+  it('should return a text, with "authorized"', () => {
     const formatListSales = new FormatListSales()
     const statusFormatted = formatListSales.formatStatus('authorized')
 
-    render(statusFormatted)
-
-    expect(screen.getByText('Autorizada')).toBeInTheDocument()
+    expect(statusFormatted).toBe('authorized')
   })
 
-  it('should return a jsx element, with "Concluída" text', () => {
+  it('should return a text, with "completed"', () => {
     const formatListSales = new FormatListSales()
     const statusFormatted = formatListSales.formatStatus('completed')
 
-    render(statusFormatted)
-
-    expect(screen.getByText('Concluída')).toBeInTheDocument()
+    expect(statusFormatted).toBe('completed')
   })
 
-  it('should return a jsx element, with "Cancelada" text', () => {
+  it('should return a text, with "canceled"', () => {
     const formatListSales = new FormatListSales()
     const statusFormatted = formatListSales.formatStatus('canceled')
 
-    render(statusFormatted)
-
-    expect(screen.getByText('Cancelada')).toBeInTheDocument()
+    expect(statusFormatted).toEqual('canceled')
   })
 
-  it('should return a jsx element, with "Negada" text', () => {
+  it('should return a text, with "denied"', () => {
     const formatListSales = new FormatListSales()
     const statusFormatted = formatListSales.formatStatus('denied')
 
-    render(statusFormatted)
-
-    expect(screen.getByText('Negada')).toBeInTheDocument()
+    expect(statusFormatted).toBe('denied')
   })
 })
 
@@ -69,40 +58,32 @@ describe('formatDateAndTime', () => {
 })
 
 describe('formatFlag', () => {
-  it('should return a jsx element, with data-testid "default"', () => {
+  it('should return a text undefined', () => {
     const formatListSales = new FormatListSales()
     const flagFormatted = formatListSales.formatFlag('undefined')
 
-    render(flagFormatted)
-
-    expect(screen.getByTestId('default')).toBeInTheDocument()
+    expect(flagFormatted).toEqual('undefined')
   })
 
-  it('should return a jsx element, with data-testid "master"', () => {
+  it('should return a text mastercard', () => {
     const formatListSales = new FormatListSales()
-    const flagFormatted = formatListSales.formatFlag('master')
+    const flagFormatted = formatListSales.formatFlag('mastercard')
 
-    render(flagFormatted)
-
-    expect(screen.getByTestId('master')).toBeInTheDocument()
+    expect(flagFormatted).toEqual('mastercard')
   })
 
   it('should return a jsx element, with data-testid "visa"', () => {
     const formatListSales = new FormatListSales()
     const flagFormatted = formatListSales.formatFlag('visa')
 
-    render(flagFormatted)
-
-    expect(screen.getByTestId('visa')).toBeInTheDocument()
+    expect(flagFormatted).toEqual('visa')
   })
 
   it('should return a jsx element, with data-testid "pix"', () => {
     const formatListSales = new FormatListSales()
     const flagFormatted = formatListSales.formatFlag('pix')
 
-    render(flagFormatted)
-
-    expect(screen.getByTestId('pix')).toBeInTheDocument()
+    expect(flagFormatted).toEqual('pix')
   })
 })
 
@@ -146,8 +127,7 @@ describe('format', () => {
   it('should return a list of sales, with the values formatted', () => {
     const formatListSales = new FormatListSales()
     const salesFormatted = formatListSales.format(salesMockList)
-    const salesFormattedString = JSON.stringify(salesFormatted)
 
-    expect(salesFormattedString).toEqual(salesMockListFormattedString)
+    expect(salesFormatted).toEqual(salesMockListFormatted)
   })
 })
