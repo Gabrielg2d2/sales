@@ -1,7 +1,13 @@
 import { DataSalesModel } from './model'
 
-export type HttpClientGetSales = (url: string) => Promise<DataSalesModel>
+export type HttpClientGetSales = (url: string) => Promise<{
+  data: DataSalesModel[]
+  status: number
+}>
 
 export interface IListSales {
-  list: () => Promise<DataSalesModel>
+  list: () => Promise<{
+    data: DataSalesModel[]
+    status: number
+  }>
 }

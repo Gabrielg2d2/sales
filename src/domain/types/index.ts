@@ -1,15 +1,3 @@
-export type DataSales = {
-  status: string
-  origin: string
-  dateAndTime: string
-  flag: string
-  code: string
-  brute: number
-  liquid: number
-  paymentMethod: string
-  storeOrDocument: string
-}
-
 export type DataSalesModel = {
   id: string
   status: string
@@ -21,6 +9,14 @@ export type DataSalesModel = {
   liquid: number
   paymentMethod: string
   storeOrDocument: string
+  nsuAcquio: string
+  idTransaction: string
+  idAuthorization: string
+  orderNumber: string
+  rates: string
+  discount: string
+  document: string
+  captureMode: string
 }
 
 export type DataSalesModelFormatted = {
@@ -34,9 +30,19 @@ export type DataSalesModelFormatted = {
   liquid: number
   paymentMethod: string
   storeOrDocument: string
-  statusFormatted: JSX.Element
+  nsuAcquio: string
+  idTransaction: string
+  idAuthorization: string
+  orderNumber: string
+  rates: string
+  discount: string
+  document: string
+  captureMode: string
+  statusFormatted: JSX.Element // formatted
   dateAndTimeFormatted: string
   flagFormatted: JSX.Element
   bruteFormatted: string
   liquidFormatted: string
+  ratesFormatted: string
+  discountFormatted: string
 }
