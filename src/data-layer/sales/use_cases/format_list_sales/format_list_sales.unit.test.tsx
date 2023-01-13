@@ -104,3 +104,21 @@ describe('formatFlag', () => {
     expect(screen.getByTestId('pix')).toBeInTheDocument()
   })
 })
+
+describe('formatBrute', () => {
+  it('should return a string, with the value formatted', () => {
+    const formatListSales = new FormatListSales()
+    const bruteFormatted = formatListSales.formatBrute(1000)
+
+    expect(bruteFormatted).toBe('R$ 1.000,00')
+  })
+})
+
+describe('formatLiquid', () => {
+  it('should return a string, with the value formatted', () => {
+    const formatListSales = new FormatListSales()
+    const liquidFormatted = formatListSales.formatLiquid(1000)
+
+    expect(liquidFormatted).toBe('R$ 1.000,00')
+  })
+})
