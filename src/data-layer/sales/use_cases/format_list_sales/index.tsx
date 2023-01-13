@@ -47,7 +47,7 @@ export class FormatListSales implements IFormatListSales {
   }
 
   formatRates(rates: number): string {
-    const calc = rates / 100
+    const calc = (rates / 100) * 100
     return `${calc}%`
   }
 

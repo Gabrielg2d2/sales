@@ -122,3 +122,12 @@ describe('formatLiquid', () => {
     expect(liquidFormatted).toBe('R$ 1.000,00')
   })
 })
+
+describe('formatRates', () => {
+  it('should return a string, with the value formatted', () => {
+    const formatListSales = new FormatListSales()
+    const ratesFormatted = formatListSales.formatRates(25)
+
+    expect(ratesFormatted).toBe('25%')
+  })
+})
