@@ -15,7 +15,9 @@ module.exports = {
     '!src/*.d.ts',
     '!**/domain/**',
     '!src/index.tsx',
-    '!src/global/types/**/*'
+    '!src/global/types/**/*',
+    '!src/global/functions/index.ts', // export
+    '!src/data-layer/sales/use_cases/index.ts' // export
   ],
   coverageReporters: ['json', 'text', 'lcov', 'clover'],
   coverageProvider: 'v8',
