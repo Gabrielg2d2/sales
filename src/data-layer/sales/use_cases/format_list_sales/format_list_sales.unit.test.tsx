@@ -1,5 +1,6 @@
 import { FormatListSales } from '.'
 import { render, screen } from '@testing-library/react'
+import { salesMockList, salesMockListFormattedString } from 'mock/sales'
 
 describe('formatStatus', () => {
   it('should return a jsx element, with "Indefinido" text', () => {
@@ -138,5 +139,15 @@ describe('formatDiscount', () => {
     const discountFormatted = formatListSales.formatDiscount(100)
 
     expect(discountFormatted).toBe('-R$ 100,00')
+  })
+})
+
+describe('format', () => {
+  it('should return a list of sales, with the values formatted', () => {
+    const formatListSales = new FormatListSales()
+    const salesFormatted = formatListSales.format(salesMockList)
+    const salesFormattedString = JSON.stringify(salesFormatted)
+
+    expect(salesFormattedString).toEqual(salesMockListFormattedString)
   })
 })
