@@ -13,8 +13,8 @@ export type DataSalesModel = {
   idTransaction: string
   idAuthorization: string
   orderNumber: string
-  rates: string
-  discount: string
+  rates: number
+  discount: number
   document: string
   captureMode: string
 }
@@ -34,8 +34,8 @@ export type DataSalesModelFormatted = {
   idTransaction: string
   idAuthorization: string
   orderNumber: string
-  rates: string
-  discount: string
+  rates: number
+  discount: number
   document: string
   captureMode: string
   statusFormatted: JSX.Element // formatted

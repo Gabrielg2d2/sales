@@ -6,5 +6,7 @@ export interface IFormatListSales {
   formatFlag: (flag: string) => JSX.Element
   formatBrute: (brute: number) => string
   formatLiquid: (liquid: number) => string
+  formatRates: (rates: number) => string
+  formatDiscount: (discount: number) => string
   format: (data: DataSalesModel[]) => DataSalesModelFormatted[]
 }

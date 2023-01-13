@@ -6,20 +6,21 @@ export class FormatListSales implements IFormatListSales {
   formatStatus(status: string): JSX.Element {
     switch (status) {
       case 'authorized':
-        return <span>{status}</span>
+        return <span>Autorizada</span>
       case 'completed':
-        return <span>{status}</span>
+        return <span>Concluída</span>
       case 'canceled':
-        return <span>{status}</span>
+        return <span>Cancelada</span>
       case 'denied':
-        return <span>{status}</span>
+        return <span>Negada</span>
       default:
-        return <span>{status}</span>
+        return <span>Indefinido</span>
     }
   }
 
   formatDateAndTime(dateAndTime: string): string {
     const { dateFormatted, timeFormatted } = formatDateAndHourPtBr(dateAndTime)
+    if (!dateFormatted || !timeFormatted) return dateAndTime
 
     return `${dateFormatted} às ${timeFormatted}`
   }
@@ -45,6 +46,15 @@ export class FormatListSales implements IFormatListSales {
     return formatMoneyPtBr(liquid)
   }
 
+  formatRates(rates: number): string {
+    const calc = rates / 100
+    return `${calc}%`
+  }
+
+  formatDiscount(discount: number): string {
+    return `-${formatMoneyPtBr(discount)}`
+  }
+
   format(data: DataSalesModel[]): DataSalesModelFormatted[] {
     return data.map((sale) => {
       const statusFormatted = this.formatStatus(sale.status)
@@ -52,6 +62,8 @@ export class FormatListSales implements IFormatListSales {
       const flagFormatted = this.formatFlag(sale.flag)
       const bruteFormatted = this.formatBrute(sale.brute)
       const liquidFormatted = this.formatLiquid(sale.liquid)
+      const ratesFormatted = this.formatRates(sale.rates)
+      const discountFormatted = this.formatDiscount(sale.discount)
 
       return {
         ...sale,
@@ -59,7 +71,9 @@ export class FormatListSales implements IFormatListSales {
         dateAndTimeFormatted,
         flagFormatted,
         bruteFormatted,
-        liquidFormatted
+        liquidFormatted,
+        ratesFormatted,
+        discountFormatted
       }
     })
   }
