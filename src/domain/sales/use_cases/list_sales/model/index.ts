@@ -1,10 +1,3 @@
-import { DataSales } from 'domain/types'
+import { SalesModel } from 'domain/types'
 
-type DataSalesApi = {
-  id: string
-} & DataSales
-
-export type DataSalesModel = {
-  data: DataSalesApi[]
-  status: number
-}
+export type DataSalesModel = SalesModel

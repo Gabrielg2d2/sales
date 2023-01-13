@@ -1,7 +1,4 @@
-import {
-  HttpClientGetSales,
-  IListSales
-} from 'domain/sales/use_cases/list_sales'
+import { HttpClientGetSales, IListSales } from 'domain/sales/use_cases'
 
 export class ListSales implements IListSales {
   constructor(
