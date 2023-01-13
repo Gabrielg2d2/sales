@@ -1,10 +1,6 @@
 import { IFormatListSales } from 'domain/sales/use_cases'
 import { DataSalesModel, DataSalesModelFormatted } from 'domain/types'
-import {
-  formatDatePtBr,
-  formatHourPtBr,
-  formatMoneyPtBr
-} from 'global/functions'
+import { formatDateAndHourPtBr, formatMoneyPtBr } from 'global/functions'
 
 export class FormatListSales implements IFormatListSales {
   formatStatus(status: string): JSX.Element {
@@ -23,9 +19,7 @@ export class FormatListSales implements IFormatListSales {
   }
 
   formatDateAndTime(dateAndTime: string): string {
-    const dateFormatted = formatDatePtBr(dateAndTime)
-
-    const timeFormatted = formatHourPtBr(dateAndTime)
+    const { dateFormatted, timeFormatted } = formatDateAndHourPtBr(dateAndTime)
 
     return `${dateFormatted} às ${timeFormatted}`
   }
