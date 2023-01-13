@@ -131,3 +131,12 @@ describe('formatRates', () => {
     expect(ratesFormatted).toBe('25%')
   })
 })
+
+describe('formatDiscount', () => {
+  it('should return a string, with the value formatted negative', () => {
+    const formatListSales = new FormatListSales()
+    const discountFormatted = formatListSales.formatDiscount(100)
+
+    expect(discountFormatted).toBe('-R$ 100,00')
+  })
+})
