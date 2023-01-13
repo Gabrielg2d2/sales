@@ -28,13 +28,13 @@ export class FormatListSales implements IFormatListSales {
   formatFlag(flag: string): JSX.Element {
     switch (flag) {
       case 'master':
-        return <span>{flag}</span>
+        return <span data-testid="master">{flag}</span>
       case 'visa':
-        return <span>{flag}</span>
+        return <span data-testid="visa">{flag}</span>
       case 'pix':
-        return <span>{flag}</span>
+        return <span data-testid="pix">{flag}</span>
       default:
-        return <span>{flag}</span>
+        return <span data-testid="default">{flag}</span>
     }
   }
 

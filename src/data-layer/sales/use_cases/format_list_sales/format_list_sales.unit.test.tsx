@@ -66,3 +66,41 @@ describe('formatDateAndTime', () => {
     expect(dateAndTimeFormatted).toBe('2021-09-01Tyyyyy')
   })
 })
+
+describe('formatFlag', () => {
+  it('should return a jsx element, with data-testid "default"', () => {
+    const formatListSales = new FormatListSales()
+    const flagFormatted = formatListSales.formatFlag('undefined')
+
+    render(flagFormatted)
+
+    expect(screen.getByTestId('default')).toBeInTheDocument()
+  })
+
+  it('should return a jsx element, with data-testid "master"', () => {
+    const formatListSales = new FormatListSales()
+    const flagFormatted = formatListSales.formatFlag('master')
+
+    render(flagFormatted)
+
+    expect(screen.getByTestId('master')).toBeInTheDocument()
+  })
+
+  it('should return a jsx element, with data-testid "visa"', () => {
+    const formatListSales = new FormatListSales()
+    const flagFormatted = formatListSales.formatFlag('visa')
+
+    render(flagFormatted)
+
+    expect(screen.getByTestId('visa')).toBeInTheDocument()
+  })
+
+  it('should return a jsx element, with data-testid "pix"', () => {
+    const formatListSales = new FormatListSales()
+    const flagFormatted = formatListSales.formatFlag('pix')
+
+    render(flagFormatted)
+
+    expect(screen.getByTestId('pix')).toBeInTheDocument()
+  })
+})
