@@ -3,7 +3,13 @@ import MonetizationOnOutlinedIcon from '@mui/icons-material/MonetizationOnOutlin
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline'
 import { globalColors } from 'global/styles/colors'
 
-export function InformationSectionSales() {
+type Props = {
+  liquid: string
+  brute: string
+  quantity: string
+}
+
+export function InformationSectionSales(props: Props) {
   return (
     <Stack
       direction="row"
@@ -28,21 +34,21 @@ export function InformationSectionSales() {
         <Stack>
           <Typography>Valor bruto</Typography>
           <Typography fontWeight="700" fontSize={18} noWrap>
-            R$ 61,21
+            {props.brute}
           </Typography>
         </Stack>
 
         <Stack>
           <Typography>Valor líquido</Typography>
           <Typography fontWeight="700" fontSize={18} noWrap>
-            R$ 59,23
+            {props.liquid}
           </Typography>
         </Stack>
 
         <Stack>
           <Typography>Quantidade de vendas</Typography>
           <Typography fontWeight="700" fontSize={18}>
-            5
+            {props.quantity}
           </Typography>
         </Stack>
       </Stack>

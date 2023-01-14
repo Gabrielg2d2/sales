@@ -1,24 +1,24 @@
-// {
-//   "salesFakeApi": [
-//     {
-//       "id": "11231345",
-//       "status": "status_fake",
-//       "origin": "origin_fake",
-//       "dateAndTime": "2019-01-01T00:00:00.000Z",
-//       "flag": "flag_fake",
-//       "code": "code_fake",
-//       "brute": 1000,
-//       "liquid": 700,
-//       "paymentMethod": "paymentMethod_fake",
-//       "storeOrDocument": "storeOrDocument_fake",
-//       "nsuAcquio": "nsuAcquio_fake",
-//       "idTransaction": "idTransaction_fake",
-//       "idAuthorization": "idAuthorization_fake",
-//       "orderNumber": "orderNumber_fake",
-//       "rates": 1,
-//       "discount": 0,
-//       "document": "document_fake",
-//       "captureMode": "captureMode_fake"
-//     }
-//   ]
-// }
+{
+  "salesFakeApi": [
+    {
+      "id": "11231345",
+      "status": "status_fake",
+      "origin": "origin_fake",
+      "dateAndTime": "2019-01-01T00:00:00.000Z",
+      "flag": "flag_fake",
+      "code": "code_fake",
+      "brute": 1000,
+      "liquid": 700,
+      "paymentMethod": "paymentMethod_fake",
+      "storeOrDocument": "storeOrDocument_fake",
+      "nsuAcquio": "nsuAcquio_fake",
+      "idTransaction": "idTransaction_fake",
+      "idAuthorization": "idAuthorization_fake",
+      "orderNumber": "orderNumber_fake",
+      "rates": 1,
+      "discount": 0,
+      "document": "document_fake",
+      "captureMode": "captureMode_fake"
+    }
+  ]
+}
