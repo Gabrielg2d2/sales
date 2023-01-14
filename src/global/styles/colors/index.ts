@@ -2,8 +2,7 @@ export const globalColors = {
   green: {
     200: '#80cbc4',
     400: '#26a69a',
-    600: '#00897b',
-    900: '#004d40'
+    600: '#00897b'
   },
 
   blue: {

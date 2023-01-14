@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { SalesMain } from 'data-layer/sales/main'
-import { HeaderPage } from 'components/HeaderPage'
 import { Box } from '@mui/material'
+import { HeaderPage, InformationSectionSales } from 'components'
 
 export function SalesTemplate() {
   useEffect(() => {
@@ -15,6 +15,9 @@ export function SalesTemplate() {
   return (
     <Box height="100vh" bgcolor="#fff" p={2}>
       <HeaderPage title="Vendas" />
+      <section>
+        <InformationSectionSales />
+      </section>
     </Box>
   )
 }
