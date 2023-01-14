@@ -7,10 +7,8 @@ interface ISalesMain {
   getSales: () => Promise<DataSalesModelFormatted[]>
 }
 
-const url_base = `${process.env.REACT_APP_API_URL}/sales`
-
 export class SalesMain implements ISalesMain {
-  async getSales(url = url_base) {
+  async getSales(url = '/sales') {
     try {
       const listSales = new ListSales(url, api.get)
       const { data, status } = await listSales.list()
