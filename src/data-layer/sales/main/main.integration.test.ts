@@ -2,7 +2,9 @@ import { SalesMain } from '.'
 import { salesMockListFormatted } from 'mock/sales'
 import { DataSalesModelFormatted } from 'domain/sales/types'
 
-describe('SalesMain', () => {
+const urlMock = 'https://63c28243b0c286fbe5eeb563.mockapi.io/sales/sales'
+
+describe('SalesMain - stub', () => {
   it('should return a list of sales', async () => {
     const salesMain = new SalesMain()
 
@@ -55,5 +57,26 @@ describe('SalesMain', () => {
       expect(salesMainSpy).toHaveBeenCalledTimes(1)
       expect(error).toBeInstanceOf(Error)
     }
+  })
+})
+
+describe('SalesMain - api fake', () => {
+  it('should return a list of sales', async () => {
+    const salesMain = new SalesMain()
+
+    const sales = await salesMain.getSales(urlMock)
+
+    expect(sales).toBeInstanceOf(Array)
+    expect(sales).toHaveLength(1)
+  })
+
+  it('should return erro 500 api', async () => {
+    const salesMain = new SalesMain()
+
+    const sales = await salesMain.getSales(`${urlMock}/error`)
+
+    expect(sales).toBeInstanceOf(Array)
+    expect(sales).toHaveLength(0)
+    expect(sales).toEqual([])
   })
 })
