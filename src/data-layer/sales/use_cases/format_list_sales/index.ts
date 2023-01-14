@@ -1,5 +1,5 @@
 import { IFormatListSales } from 'domain/sales/use_cases'
-import { DataSalesModel, DataSalesModelFormatted } from 'domain/types'
+import { DataSalesModel, DataSalesModelFormatted } from 'domain/sales/types'
 import { formatDateAndHourPtBr, formatMoneyPtBr } from 'global/functions'
 
 export class FormatListSales implements IFormatListSales {

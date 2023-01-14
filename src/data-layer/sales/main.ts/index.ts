@@ -1,5 +1,5 @@
 import { ListSales, FormatListSales } from 'data-layer/sales/use_cases'
-import { DataSalesModelFormatted } from 'domain/types'
+import { DataSalesModelFormatted } from 'domain/sales/types'
 import { api } from 'service/api'
 
 interface ISalesMain {

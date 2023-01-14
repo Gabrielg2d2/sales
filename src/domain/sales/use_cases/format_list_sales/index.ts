@@ -1,4 +1,4 @@
-import { DataSalesModelFormatted, DataSalesModel } from 'domain/types'
+import { DataSalesModelFormatted, DataSalesModel } from 'domain/sales/types'
 
 export interface IFormatListSales {
   formatStatus: (status: string) => string
