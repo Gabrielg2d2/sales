@@ -54,7 +54,7 @@
     "test:unit:watch": "npm run test:watch -- --config=jest-unit.config.js",
     "test:integration": "npm run test -- --config=jest-integration.config.js",
     "test:integration:watch": "npm run test:watch -- --config=jest-integration.config.js",
-    "test:cov": "npm run test -- --coverage --config=jest-unit.config.js",
+    "test:cov": "npm run test -- --coverage",
     "server": "json-server --watch ./data/db.json --port 1414",
     "dev": "npm run server & npm run dev"
   },

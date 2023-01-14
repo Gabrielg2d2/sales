@@ -70,7 +70,7 @@ describe('SalesMain - api fake', () => {
     expect(sales).toHaveLength(1)
   })
 
-  it('should return erro 500 api', async () => {
+  it('should return error api', async () => {
     const salesMain = new SalesMain()
 
     const sales = await salesMain.getSales(`${urlMock}/error`)
