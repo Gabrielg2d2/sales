@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^1.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1"
@@ -53,7 +54,7 @@
     "test:integration": "npm run test -- --config=jest-integration.config.js",
     "test:integration:watch": "npm run test:watch -- --config=jest-integration.config.js",
     "test:cov": "npm run test -- --coverage",
-    "server": "json-server --watch ./data/db.json",
+    "server": "json-server --watch ./data/db.json --port 3333",
     "dev": "npm run server & npm run dev"
   },
   "browserslist": {

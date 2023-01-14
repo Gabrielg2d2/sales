@@ -15,7 +15,7 @@
       "idTransaction": "idTransaction_fake",
       "idAuthorization": "idAuthorization_fake",
       "orderNumber": "orderNumber_fake",
-      "rates": 0,
+      "rates": 1,
       "discount": 0,
       "document": "document_fake",
       "captureMode": "captureMode_fake"
