@@ -5,11 +5,9 @@ import { SalesPage } from 'pages'
 
 export function App() {
   return (
-    <div>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <SalesPage />
-      </ThemeProvider>
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <SalesPage />
+    </ThemeProvider>
   )
 }
