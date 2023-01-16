@@ -6,8 +6,8 @@ import { SalesPage } from 'pages'
 export function App() {
   return (
     <ThemeProvider theme={theme}>
-      <CssBaseline />
       <SalesPage />
+      <CssBaseline />
     </ThemeProvider>
   )
 }
