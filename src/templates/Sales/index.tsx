@@ -20,7 +20,12 @@ export function SalesTemplate() {
     <Stack height="100vh" bgcolor="#fff" p={2} spacing={2}>
       <HeaderPage title="Vendas" />
 
-      <Stack direction="column" component="main" px={{ xs: 1, sm: 4 }}>
+      <Stack
+        direction="column"
+        component="main"
+        px={{ xs: 1, sm: 4 }}
+        spacing={3}
+      >
         <section>
           <InformationSectionSales
             brute={getBrute(sales)}
