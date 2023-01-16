@@ -22,25 +22,24 @@ export function InformationSectionSales(props: Props) {
     >
       <MonetizationOnOutlinedIcon
         sx={{
-          fontSize: { xs: 0, sm: 60 }
+          fontSize: 60
         }}
       />
       <Stack
-        direction="row"
+        direction={{ xs: 'column', sm: 'row' }}
         alignItems="flex-start"
         spacing={4}
         ml={{ xs: 2, sm: 4 }}
       >
         <Stack>
           <Typography>Valor bruto</Typography>
-          <Typography fontWeight="700" fontSize={18} noWrap>
+          <Typography fontWeight="700" fontSize={18}>
             {props.brute}
           </Typography>
         </Stack>
-
         <Stack>
           <Typography>Valor líquido</Typography>
-          <Typography fontWeight="700" fontSize={18} noWrap>
+          <Typography fontWeight="700" fontSize={18}>
             {props.liquid}
           </Typography>
         </Stack>
@@ -56,7 +55,6 @@ export function InformationSectionSales(props: Props) {
       <IconButton
         sx={{
           marginLeft: 'auto',
-          marginTop: { xs: 'auto', sm: 0 },
           color: globalColors.white[50]
         }}
       >
