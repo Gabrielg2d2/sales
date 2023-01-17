@@ -20,6 +20,7 @@ export function HeaderPage({ title }: HeaderPageProps) {
         {title}
       </Typography>
       <IconButton
+        aria-label="to see"
         sx={{
           color: globalColors.green[400]
         }}
