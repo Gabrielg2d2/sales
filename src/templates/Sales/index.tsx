@@ -24,6 +24,7 @@ export function SalesTemplate() {
         direction="column"
         component="main"
         px={{ xs: 1, sm: 4 }}
+        pb={2}
         spacing={3}
       >
         <section>

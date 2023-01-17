@@ -25,6 +25,8 @@ export const globalColors = {
   },
 
   grey: {
+    200: '#bdbdbd',
+    300: '#9e9e9e',
     700: '#616161',
     800: '#424242'
   }

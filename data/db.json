@@ -17,8 +17,7 @@
       "orderNumber": "orderNumber_fake",
       "rates": 1,
       "discount": 0,
-      "document": "document_fake",
-      "captureMode": "captureMode_fake"
+      "document": "document_fake"
     }
   ]
 }

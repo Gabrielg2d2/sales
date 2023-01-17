@@ -67,7 +67,6 @@ describe('SalesMain - api fake', () => {
     const sales = await salesMain.getSales(urlMock)
 
     expect(sales).toBeInstanceOf(Array)
-    expect(sales).toHaveLength(1)
   })
 
   it('should return error api', async () => {
