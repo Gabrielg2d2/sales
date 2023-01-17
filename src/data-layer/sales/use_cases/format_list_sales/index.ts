@@ -4,7 +4,13 @@ import { formatDateAndHourPtBr, formatMoneyPtBr } from 'global/functions'
 
 export class FormatListSales implements IFormatListSales {
   formatStatus(value: string): string {
-    const list = ['authorized', 'completed', 'canceled', 'denied']
+    const list = [
+      'authorized',
+      'completed',
+      'canceled',
+      'denied',
+      'pre_authorized'
+    ]
 
     if (!list.includes(value)) return 'undefined'
 
