@@ -53,6 +53,7 @@ export function InformationSectionSales(props: Props) {
       </Stack>
 
       <IconButton
+        title="Ajuda"
         sx={{
           marginLeft: 'auto',
           color: globalColors.white[50]

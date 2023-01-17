@@ -20,6 +20,7 @@ export function TableSalesTitle({ children }: TableSalesTitleProps) {
           Lista de Vendas
         </Typography>
         <IconButton
+          title="Ajuda"
           sx={{
             color: globalColors.green[400]
           }}
