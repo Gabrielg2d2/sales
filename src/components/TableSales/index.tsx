@@ -16,7 +16,7 @@ import { TableSalesTitle } from './componentes/TableSalesTitle'
 import { TransactionDetails } from './componentes/TransactionDetails'
 import { globalColors } from 'global/styles/colors'
 import { Stack, Typography } from '@mui/material'
-import { formatStatus } from 'global/functions'
+import { formatFlag, formatStatus } from 'global/functions'
 
 type RowProps = {
   row: DataSalesModelFormatted
@@ -44,7 +44,7 @@ function Row({ row }: RowProps) {
         </TableCell>
         <TableCell>{row.origin}</TableCell>
         <TableCell>{row.dateAndTimeFormatted}</TableCell>
-        <TableCell>{row.flagFormatted}</TableCell>
+        <TableCell>{formatFlag(row.flagFormatted)}</TableCell>
         <TableCell>{row.code}</TableCell>
         <TableCell>{row.bruteFormatted}</TableCell>
         <TableCell>{row.liquidFormatted}</TableCell>
