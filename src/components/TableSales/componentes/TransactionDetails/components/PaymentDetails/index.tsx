@@ -2,10 +2,10 @@ import { Stack, Typography } from '@mui/material'
 import { globalColors } from 'global/styles/colors'
 
 type Props = {
-  paymentMethod: string
+  captureMode: string
 }
 
-export function PaymentDetails({ paymentMethod }: Props) {
+export function PaymentDetails({ captureMode }: Props) {
   const gapRow = 1.5
 
   return (
@@ -36,7 +36,7 @@ export function PaymentDetails({ paymentMethod }: Props) {
           Modo de captura
         </Typography>
         <Typography color={globalColors.grey[700]} fontWeight="500">
-          {paymentMethod}
+          {captureMode}
         </Typography>
       </Stack>
     </Stack>

@@ -1,0 +1,42 @@
+export const dataApiFake = [
+  {
+    id: 'id_fake',
+    status: 'authorized',
+    origin: 'origin_fake',
+    dateAndTime: '2023-01-11T00:00:00.000Z',
+    flag: 'mastercard',
+    code: '189c498198198',
+    brute: 500,
+    liquid: 480,
+    paymentMethod: 'Crédito a vista',
+    storeOrDocument: 'storeOrDocument_fake',
+    nsuAcquio: 'nsuAcquio_fake',
+    idTransaction: '8798498181',
+    idAuthorization: '181csa98c1as9',
+    orderNumber: 'orderNumber_fake',
+    rates: 2,
+    discount: 10,
+    document: 'document_fake',
+    captureMode: 'captureMode_fake'
+  },
+  {
+    id: 'id_fake2',
+    status: 'authorized',
+    origin: 'origin_fake2',
+    dateAndTime: '2023-01-09T00:00:00.000Z',
+    flag: 'pix',
+    code: '21sac1as9c1sa98c',
+    brute: 985,
+    liquid: 700,
+    paymentMethod: 'pix',
+    storeOrDocument: 'storeOrDocument_fake2',
+    nsuAcquio: 'nsuAcquio_fake2',
+    idTransaction: '1c89as1ca98sc',
+    idAuthorization: '18198198189198',
+    orderNumber: '123165165165',
+    rates: 5,
+    discount: 7.5,
+    document: '181861861681csac',
+    captureMode: 'captureMode_fake'
+  }
+]

@@ -15,7 +15,8 @@ export const salesMock = {
   orderNumber: 'orderNumber_fake',
   rates: 100,
   discount: 10,
-  document: 'document_fake'
+  document: 'document_fake',
+  captureMode: 'captureMode_fake'
 }
 
 export const salesMockTwo = {
@@ -35,7 +36,8 @@ export const salesMockTwo = {
   orderNumber: 'orderNumber_fake2',
   rates: 100,
   discount: 7.5,
-  document: 'document_fake2'
+  document: 'document_fake2',
+  captureMode: 'captureMode_fake'
 }
 
 export const salesMockList = [salesMock, salesMockTwo]
@@ -59,6 +61,7 @@ export const salesMockListFormatted = [
     rates: 100,
     discount: 10,
     document: 'document_fake',
+    captureMode: 'captureMode_fake',
     statusFormatted: 'undefined',
     dateAndTimeFormatted: '01/01/2019 às 00:00:00',
     flagFormatted: 'mastercard',
@@ -85,6 +88,7 @@ export const salesMockListFormatted = [
     rates: 100,
     discount: 7.5,
     document: 'document_fake2',
+    captureMode: 'captureMode_fake',
     statusFormatted: 'undefined',
     dateAndTimeFormatted: '01/01/2019 às 00:00:00',
     flagFormatted: 'pix',

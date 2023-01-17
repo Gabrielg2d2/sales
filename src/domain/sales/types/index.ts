@@ -16,6 +16,7 @@ export type DataSalesModel = {
   rates: number
   discount: number
   document: string
+  captureMode: string
 }
 
 export type DataSalesModelFormatted = {
@@ -36,6 +37,7 @@ export type DataSalesModelFormatted = {
   rates: number
   discount: number
   document: string
+  captureMode: string
   statusFormatted: string // formatted
   dateAndTimeFormatted: string
   flagFormatted: string

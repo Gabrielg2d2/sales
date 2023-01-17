@@ -35,7 +35,7 @@ export function TransactionDetails({ open, row }: TransactionDetailsProps) {
   }
 
   const paymentData = {
-    paymentMethod: row.paymentMethod
+    captureMode: row.captureMode
   }
 
   return (
