@@ -4,6 +4,7 @@ import { SelectChangeEvent } from '@mui/material'
 import { SalesMain } from 'data-layer/sales/main'
 
 export function useSales() {
+  const [loading, setLoading] = useState(false)
   const [sales, setSales] = useState<DataSalesModelFormatted[]>([])
   const [orderTable, setOrderTable] = useState('')
   const [columns] = useState([
@@ -51,12 +52,14 @@ export function useSales() {
 
   useEffect(() => {
     void (async () => {
+      setLoading(true)
       const salesMain = new SalesMain()
       const orderUrl = orderTable
         ? `/sales?sortBy=${orderTable}&order=desc`
         : '/sales?sortBy=dateAndTime&order=desc'
       const response = await salesMain.getSales(orderUrl)
       setSales(response)
+      setLoading(false)
     })()
   }, [orderTable])
 
@@ -64,6 +67,7 @@ export function useSales() {
     sales,
     columns,
     orderTable,
-    handleChangeOrderTable
+    handleChangeOrderTable,
+    loading
   }
 }
