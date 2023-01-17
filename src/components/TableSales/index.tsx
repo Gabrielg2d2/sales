@@ -14,6 +14,8 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
 import { DataSalesModelFormatted } from 'domain/sales/types'
 import { TableSalesTitle } from './componentes/TableSalesTitle'
 import { TransactionDetails } from './componentes/TransactionDetails'
+import { globalColors } from 'global/styles/colors'
+import { Stack, Typography } from '@mui/material'
 
 type RowProps = {
   row: DataSalesModelFormatted
@@ -72,12 +74,36 @@ const columns = [
 ]
 
 export function TableSales({ dataSales }: Props) {
+  if (!dataSales.length) {
+    return (
+      <Stack
+        justifyContent="center"
+        alignItems="center"
+        border={`1px solid ${globalColors.grey[200]}`}
+        borderRadius={2}
+        flex={1}
+        minHeight={200}
+      >
+        <Typography variant="h6" component="h3" sx={{ textAlign: 'center' }}>
+          Nenhum dado encontrado
+        </Typography>
+      </Stack>
+    )
+  }
+
   return (
     <>
       <TableSalesTitle>
         <span>Ordenar</span>
       </TableSalesTitle>
-      <TableContainer component={Paper}>
+      <TableContainer
+        component={Paper}
+        elevation={0}
+        sx={{
+          border: `1px solid ${globalColors.grey[200]}`,
+          borderBottom: 'none'
+        }}
+      >
         <Table aria-label="collapsible table">
           <TableHead>
             <TableRow>
