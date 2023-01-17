@@ -27,8 +27,9 @@ function Status({ bgcolor, color, text }: StatusProps) {
 
 export function formatStatus(key: string) {
   // ['authorized', 'completed', 'canceled', 'denied', 'pre_authorized']
+  const statusKey = key.toLowerCase()
 
-  switch (key) {
+  switch (statusKey) {
     case 'authorized':
       return (
         <Status
