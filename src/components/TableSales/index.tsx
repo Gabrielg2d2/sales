@@ -97,30 +97,39 @@ export function TableSales({ dataSales }: Props) {
       <TableSalesTitle>
         <span>Ordenar</span>
       </TableSalesTitle>
-      <TableContainer
-        component={Paper}
-        elevation={0}
+      <Paper
         sx={{
+          width: '100%',
+          overflow: 'hidden',
           border: `1px solid ${globalColors.grey[200]}`,
-          borderBottom: 'none'
+          borderBottom: 'none',
+          maxHeight: { xs: '60vh', md: '50vh', lg: '50vh', xl: '65vh' }
         }}
       >
-        <Table aria-label="collapsible table">
-          <TableHead>
-            <TableRow>
-              <TableCell />
-              {columns.map((column) => (
-                <TableCell key={column}>{column}</TableCell>
+        <TableContainer
+          component={Paper}
+          elevation={0}
+          sx={{
+            maxHeight: '100%'
+          }}
+        >
+          <Table stickyHeader aria-label="collapsible table">
+            <TableHead>
+              <TableRow>
+                <TableCell />
+                {columns.map((column) => (
+                  <TableCell key={column}>{column}</TableCell>
+                ))}
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {dataSales.map((row) => (
+                <Row key={row.id} row={row} />
               ))}
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {dataSales.map((row) => (
-              <Row key={row.id} row={row} />
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </Paper>
     </>
   )
 }
