@@ -9,7 +9,7 @@ type Props = {
   quantity: string
 }
 
-export function InformationSectionSales(props: Props) {
+export function InformationSectionSales({ liquid, brute, quantity }: Props) {
   return (
     <Stack
       direction="row"
@@ -34,25 +34,26 @@ export function InformationSectionSales(props: Props) {
         <Stack>
           <Typography>Valor bruto</Typography>
           <Typography fontWeight="700" fontSize={18}>
-            {props.brute}
+            {brute}
           </Typography>
         </Stack>
         <Stack>
           <Typography>Valor líquido</Typography>
           <Typography fontWeight="700" fontSize={18}>
-            {props.liquid}
+            {liquid}
           </Typography>
         </Stack>
 
         <Stack>
           <Typography>Quantidade de vendas</Typography>
           <Typography fontWeight="700" fontSize={18}>
-            {props.quantity}
+            {quantity}
           </Typography>
         </Stack>
       </Stack>
 
       <IconButton
+        aria-label="Ajuda"
         title="Ajuda"
         sx={{
           marginLeft: 'auto',
