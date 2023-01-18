@@ -98,3 +98,42 @@ export const salesMockListFormatted = [
     discountFormatted: '-R$ 7,50'
   }
 ]
+
+export const columnsMock = [
+  {
+    label: 'Status',
+    value: 'status'
+  },
+  {
+    label: 'Origem',
+    value: 'origin'
+  },
+  {
+    label: 'Data e hora',
+    value: 'dateAndTime'
+  },
+  {
+    label: 'Bandeira',
+    value: 'flag'
+  },
+  {
+    label: 'Código',
+    value: 'code'
+  },
+  {
+    label: 'Bruto',
+    value: 'brute'
+  },
+  {
+    label: 'Líquido',
+    value: 'liquid'
+  },
+  {
+    label: 'Modo de pagamento',
+    value: 'paymentMethod'
+  },
+  {
+    label: 'Loja/Documento',
+    value: 'storeOrDocument'
+  }
+]
