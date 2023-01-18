@@ -6,13 +6,13 @@ Publicado (Vercel): [https://sales-rho.vercel.app/](https://sales-rho.vercel.app
 
 Desktop:
 
-<img src="./public/doc/table.png" alt='Imagem da tabela de vendas'>
+<img src="./public/doc/img/table.png" alt='Imagem da tabela de vendas'>
 
-<img src="./public/doc/table_expand.png" alt='Imagem da tabela de vendas, com linha seleciona e aberta'>
+<img src="./public/doc/img/table_expand.png" alt='Imagem da tabela de vendas, com linha seleciona e aberta'>
 
 Mobile:
 
-<img src="./public/doc/mobile.png" alt='Imagem da tabela de vendas, com outra dimensão, versão mobile'>
+<img src="./public/doc/img/mobile.png" alt='Imagem da tabela de vendas, com outra dimensão, versão mobile'>
 
 **Descrição:**
 
@@ -43,6 +43,14 @@ Sobre a organização de pasta do projeto. Usei um padrão próprio, algo que ap
 O que pode chamar a atenção, são as pastas pages e template.
 
 Gosto de ter a pasta pages, para facilitar quando uso um context (provider), ou algum parâmetro que quero passar globalmente de forma simples.
+
+Regras do projeto:
+
+Para somar o valor bruto, líquido e quantidade, usei uma função do lado da ui, com "reducer", acredito que isso pode variar e fazer mais sentido retornar da api em alguns casos, mas para o fim desse projeto e demonstrar conhecimento optei por essa forma.
+
+Já no caso de ordenar, como a paginação não foi determinada, optei por ordenar através da api.
+
+Dois pontos que devido ao tempo não consegui implementar. paginação e ação nos demais botões.
 
 **SCRIPTS**
 
