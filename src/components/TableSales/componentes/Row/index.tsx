@@ -27,7 +27,11 @@ export function Row({ row }: RowProps) {
               setOpen(!open)
             }}
           >
-            {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
+            {open ? (
+              <KeyboardArrowUpIcon data-testid="open_expand" />
+            ) : (
+              <KeyboardArrowDownIcon data-testid="close_expand" />
+            )}
           </IconButton>
         </TableCell>
         <TableCell component="th" scope="row">

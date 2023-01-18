@@ -24,6 +24,7 @@
     "@typescript-eslint/space-before-function-paren": "off",
     "@typescript-eslint/consistent-type-definitions": "off",
     "@typescript-eslint/strict-boolean-expressions": "off",
+    "multiline-ternary": "off",
     "@typescript-eslint/naming-convention": [
       "error",
       {
