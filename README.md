@@ -4,6 +4,8 @@ Repositório: [https://github.com/Gabrielg2d2/sales](https://github.com/Gabrielg
 
 Publicado (Vercel): [https://sales-rho.vercel.app/](https://sales-rho.vercel.app/)
 
+Coverage: [https://sales-atj2.vercel.app/](https://sales-atj2.vercel.app/)
+
 Desktop:
 
 <img src="./public/doc/img/table.png" alt='Imagem da tabela de vendas'>
