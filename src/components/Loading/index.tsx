@@ -6,8 +6,10 @@ type LoadingProps = {
 }
 
 export function Loading({ open = false }: LoadingProps) {
+  if (!open) return null
+
   return (
-    <div>
+    <div data-testid="loading_true">
       <Backdrop
         sx={{
           color: '#fff',
