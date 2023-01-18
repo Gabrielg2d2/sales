@@ -14,10 +14,11 @@ module.exports = {
     'src/**',
     '!src/*.d.ts',
     '!src/App.tsx',
-    '!src/components/index.ts',
     '!**/domain/**',
     '!src/index.tsx',
-    '!src/global/types/**/*',
+    '!src/global/styles/**/*',
+    '!src/components/index.ts', // export
+    '!src/pages/index.ts', // export
     '!src/global/functions/index.ts', // export
     '!src/data-layer/sales/use_cases/index.ts' // export
   ],

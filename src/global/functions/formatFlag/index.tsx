@@ -19,6 +19,6 @@ export function formatFlag(flag: string) {
     case 'mastercard':
       return <ImageFlag src={imgMasterCard} alt="master card" />
     default:
-      return '🏳️'
+      return <ImageFlag src={'🏳️'} alt="default" />
   }
 }
