@@ -1,46 +1,85 @@
-# Getting Started with Create React App
+# Vendas
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Repositório: [https://github.com/Gabrielg2d2/sales](https://github.com/Gabrielg2d2/sales)
 
-## Available Scripts
+Publicado (Vercel): [https://sales-rho.vercel.app/](https://sales-rho.vercel.app/)
 
-In the project directory, you can run:
+Desktop:
 
-### `npm start`
+<img src="./public/doc/table.png" alt='Imagem da tabela de vendas'>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<img src="./public/doc/table_expand.png" alt='Imagem da tabela de vendas, com linha seleciona e aberta'>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Mobile:
 
-### `npm test`
+<img src="./public/doc/mobile.png" alt='Imagem da tabela de vendas, com outra dimensão, versão mobile'>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Descrição:**
 
-### `npm run build`
+Nesse projeto optei em aplicar DDD. Com isso podemos facilmente escalar o projeto, inclusive algumas funções que apliquei, apesar de simples, podem escalar complexidade no futuro.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Além disso, com a regra de negócio apartada da UI, temos o pode de migrar para diferentes frameworks, como React-Native, Vue entre outros, no mesmo contexto da stack de javascript.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Para configuração do projeto, usei o create-react-app, não vejo a necessidade de configurar o Webpack nesse caso.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Usei o Jest e Testing-library como sugerido, são duas libs que costumo usar nos meus projetos.
 
-### `npm run eject`
+Configurei o Jest para 2 tipos de ambiente. Testes unitários, testes de integração, vou deixar os comandos abaixo, para facilitar o entendimento.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Um detalhe, sobre o teste de integração, não gosto da ideia de bater na api real, mas deixei dessa forma, para mostrar meu entendimento, geralmente uso um stub, que também apliquei nesse caso.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Para a UI, escolhi o material-ui, já que facilmente atenderia a aparência proposta, além de ter grande familiaridade, já que trabalhei nos últimos 3 anos com material, em 90% dos projetos.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Como boas práticas, para organização do código e controle dos commits, escolhi algumas libs que uso diariamente.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Husky
+- Linter-staged
+- Prettier
+- Eslint
+- Editor-config
 
-## Learn More
+Sobre a organização de pasta do projeto. Usei um padrão próprio, algo que aplico em todos os projetos possíveis que inicio, mas claro, pode ser combinado por equipe, projeto, etc.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+O que pode chamar a atenção, são as pastas pages e template.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Gosto de ter a pasta pages, para facilitar quando uso um context (provider), ou algum parâmetro que quero passar globalmente de forma simples.
+
+**SCRIPTS**
+
+commit:
+
+```tsx
+npm run commit
+```
+
+Testes unitários:
+
+```tsx
+npm run test:unit
+
+npm run test:unit:watch
+```
+
+Testes de integração:
+
+```tsx
+npm run test:integration
+
+npm run test:integration:watch
+```
+
+Todos os testes:
+
+```tsx
+npm run test
+
+npm run test:watch
+
+npm run test:cov
+```
+
+Levantar o projeto, após clonar o repositório:
+
+```tsx
+npm run start
+```
