@@ -50,7 +50,8 @@ Para somar o valor bruto, líquido e quantidade, usei uma função do lado da ui
 
 Já no caso de ordenar, como a paginação não foi determinada, optei por ordenar através da api.
 
-Dois pontos que devido ao tempo não consegui implementar. paginação e ação nos demais botões.
+Três pontos que devido ao tempo não consegui implementar. paginação e ação nos demais botões.
+O terceiro ponto, seria usar o "React Query", para melhorar a experiência do usuário.
 
 **SCRIPTS**
 
