@@ -17,6 +17,7 @@ module.exports = {
     '!**/domain/**',
     '!src/index.tsx',
     '!src/global/styles/**/*',
+    '!src/templates/index.ts', // export
     '!src/components/index.ts', // export
     '!src/pages/index.ts', // export
     '!src/global/functions/index.ts', // export
